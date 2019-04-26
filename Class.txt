@@ -1,0 +1,830 @@
+Jidemon
+
+bootstrapious.com
+startbootstrap.con
+webthemez
+
+INSTRUCTOR Mr. Abolaji
+------------------------
+
+
+
+	ABSOLUTE URL: http://dash.ga.co/assets/logo.png
+	Absolute URLs are links that include http:// and the full domain name before the directory (/assets/logo.png).
+
+RELATIVE URL: are shortcuts that allow you skip the domain name. It only works when you're linking to a file on the same domain as the current page.
+
+How to prevent bakcground from appearing "tiled" (not well placed)   -->background-size: cover; 
+To center a background use, background-position: center;
+
+You can select an element by one of its attribute by using square brackets:
+input[type="submit"]{}
+
+href means --> hypertext reference
+
+margin: 0 auto; --> means 0 margin on the top, and bottom, and "auto" margin on the left and right. Since both the left and right's margin strecth all the way to the edge of the page (that's what auto means), the effect is centered in the page.
+
+media query --> a technique that allows us to set CSS styles that only activate when the browser is a certain width.
+
+Another popular method to do color in CSS is rgba().This lets you add alpha (transparency) to the mix.
+
+
+
+Every time you move your mouse, click something, mouse over sth, press a key or scroll, your browser fires off an event.
+
+$("button").on("click", function(){
+alert("A button was clicked!")
+});
+
+How This Javascript Works- First we select the element(s) whose event we want to listen to.
+
+Next, we call the on()function, which sets up an event listener for our button element.
+
+The first parameter is the type of event to listen to. In this case it's "click", but we could also listen for hover, scroll, etc. It must be in quotes.
+
+The second parameter is a function containing the things to be done when our event happens.
+
+
+
+Semantic tags like <article>, <header>, <nav>, <footer> say sth useful, and defining about its content.
+
+The <div> tag is a non-semantic tag, which means it's all-purpose.
+
+HTML listens most closely to the CSS that's closest to it.
+
+what it means for HTML code to become cruft: excess code that doesn't perform a meaningful function.
+
+The line-height property lets us increase or decrease the vertical space between lines.
+
+Sliding a paragraph down to the bottom of a div
+
+This can be done with two lines of css on the paragraph style, and one line of css on the div.
+
+First to the paragraph,--> add position: absolute; This will break it out of the document's regular flow.
+Then add bottom: 0; This will move it to zero pixels from the bottom of the page .
+
+To the div --> add position: relative;
+
+text-align can only align BLOCKS to the right. 
+
+TRANSPARENCY
+Using rgba: a means(alpha channel)
+
+You control alpha on a scale from 0 (0% color: totally see-through) to 1 (100% color: completely opaque).
+
+GRADIENT
+
+Radial gradients - radiate outward in all directions, from a central point.
+
+Linear gradients - only go in one direction in a line.
+
+Gradients are so cutting-edge, they're practically top-secret, so you need secret codes to make them appear in most browsers.
+
+These codes are called vendor prefixes.
+
+An important concept in web design is graceful degradation: the idea that websites don't need to look the same in every browser, and that we shouldn't punish old browsers by denying them a useful web experience.
+
+Google Web Fonts (GWF)
+https://www.fonts.google.com
+
+levels of tags- first-level header <h1>, second-level header <h2>
+
+
+COVER VS. 100%
+
+If we set the background image's size to a fixed number or percent, it would scale poorly on smaller screens.
+
+/Remember a media query allows us to write CSS styles that only activate when the screen or browser window is a certain width.
+
+/Whitespace in designer's word doesn't mean white space; It means negative space: any part of a page that doesn't contain words or pictures. 
+
+@media (max-width: 5oopx) {
+	body{
+		background: red;
+	}
+}
+
+We're nesting a secondary CSS style sheet inside a condition.
+This means: if the screen is less than 500 pixels wide, then style the page according to the following CSS rules.
+
+
+To make a <div> visible without any content in the opening and closing tags of the <div>, you need to give the <div> a width, height and either background or border;
+
+class names should be short and simple to spell.
+
+Animating in css means to be free to come and go, or roll around the screen: it can't just be glued to the middle of the page.
+
+CSS POSITIONING
+
+Allowing the object to change positions is a CSS position property.
+
+static is the default positioning: how things work if you don't apply any positioning at all.
+
+The relative position allows you to move things around on the page relative to other things.
+
+As soon as you declare a position that is NOT static, you escape from the normal flow and open up the ability to call on four new properties: top, right, bottom, and left.
+
+left and top work like X and Y axes: you can use them to declare how far away sth should be from the left side of, or from the top of, its container in pixels.
+
+When you are positioning elements on your own, no one will tell you what pixel values to use. So how will you know?
+
+Two ways: you can do the math against the other elements on the page, or you can just eyeball it. Both cases will involve a bit of trial and error.
+
+Assigning a negative top value moves things up, toward the top of the page.
+
+A negative left value will move things to the left;
+
+In CSS Z-axes is called z-index.
+z-index only works on positioned element.
+
+How to move parts around with CSS to affects all the <div>s on a page as if they were one unit?
+
+ANS--> Remember the cascade!
+	The <style>s cascade down from the outermost containers to the inner ones. So writing an outer HTML element that contains all of the <div>s and writing some CSS style for that container element, those styles should affect every HTML element inside the container.
+
+Some CSS are already built, such as the letter "j" used as arms for the robot built (renderd in GWF).
+
+TRANSFORM!
+This property can be use to rotate elements.
+
+It's a new property, so it has to be vendor-prefixed.
+
+You can only declare the transform property once.
+
+The transform property also takes scaleY() value.
+
+CSS Animation
+
+There are two parts to a CSS animation:
+1. You need to define it.
+2. You need to assign it.
+
+Keyframing is an animation term dating back from when every single frame of a cartoon was drawn by hand.
+
+define the keyframe above what you want to style
+
+Assign animation to what you want to find a keyfram property.
+
+A function either does sth useful, or it returns a value.
+
+functions are a type of value too.
+
+One can hold a bunch of different pieces of information in one fancy value thanks to the ARRAY data type instead of writing  a gazillion individual variables.
+
+Array has a special property called .length.
+
+The length property can provide an answer to how many items are in an array?
+
+e.g alert(varName.length)
+
+JQuery .html function moves information out of js into your HTML markup.
+
+$('prompt').html(prompts[0]);
+
+Says: find a class named .promp; put whatever's in the zero-position of array prompts iniside it.
+
+val() JQuery method can be used to give values in an input field.
+
+$ sign is a shorthand that says "this thing is a JQuery object!"
+
+with JQuery push method values obtained from val() can be stored in certain variables.
+
+e.g answers.push($('input').val());
+
+Translation: push the value from the HTML <input> tag into the answers array
+
+The hide() function in JQuery can be used to hide certain elements
+e.g $('button').hide();
+
+The hide() fxn is similar to the toggle() fxn.
+
+The show() function does the opposite
+
+---------
+1st class
+---------
+
+attributes:
+acion
+method ( get and post)
+type
+name
+size
+
+NB Every time attribute-> name is declared a new columnn is created
+labels are used with the 'for' attributes
+
+favicon - favourote icon
+
+--->>>grouping of form elements
+
+https://awseducative.com
+
+---------
+14th Nov
+---------
+
+2nd class
+
+--Block elements
+--inline elements continue on the same line e.g <bold> tag <img> tag
+<div> allows elements enclosed within it to be styled together
+
+
+pseudoclass e.g <a:link
+# means id
+when refering html elements such as div you don't put < or >
+
+<span> this is equivalent to the div: it allows you to focus on one selected elements in a <div> tag
+
+grouping of elements in the same block
+NB--> % sign relates an item to the element it is contained in.
+
+
+THERE are 3 ways we style with css
+internal css > placed in the html file ---> in the <head> </head>
+external css > using link
+inline css > here the style attribute is used
+
+
+selector is used for css
+css makes use of the last font and discards others if more than one fonts given 
+
+RGB 
+red -> #ff0000
+green -> #00ff00
+blue -> #0000ff
+
+screen reader is an application that reads the content on the screen out loud to its user (e.g it is used by the blind)
+
+---------
+NOV 16
+---------
+
+3rd class
+
+linking a html to css can be done with <link> tag
+stepping out of a folder is needed when accessing another folder outside your folder i.e use ../folder you are going to
+
+ .(full stop) is the selector used for classes
+
+we separate css in order to be orderly
+and to allow us  reference them to other web pages
+
+padding is the space between the item and the container (box)
+
+Assigning of styles can be done using selector(s)
+
+---------
+NOV 19
+---------
+
+4th class
+when ever stating  values for margins and paddings i.e 1, 2 or 4 values, the browser sets 1 value to be applied to all sides when 1  value is inserted (e.g 5px), For 2 values (e.g 2px 2px) the browser sets the left side and top side , right side and bottom side for the given values. 
+
+NOV 20
+5th class
+Every element are viewed as if they are in a box
+<td> table data
+using an overflow prperty
+4 ways of specifying the border width thin, medium, thick, number.
+some border styles 
+solid 
+double
+groove
+ridge
+dashed
+
+
+when styling in %, remember that it is dependent (fluid styling) on where it finds itsef
+whenever auto is set, it takes the element to the center
+footer elements
+
+---------
+NOV 26
+---------
+
+Browser quirks are odd occurrences web developers face. It is overcomed using jquery.
+When creating an offset if there is a third value it represents that of the z axis
+
+cursor styles for links
+(i)auto (ii)crosshair (iii)pointer (iv)move (v)text (vi)wait (vii)progress (ix) zoom-in
+(x)zoom-out
+useful website for web developers -> stackoverflow
+
+--------
+DEC 5
+--------
+
+new property learnt:-> word spacing- this determines the amount of space between inline words.
+
+"clear" property
+pushes down elements to either left, right, none(default) and both
+whenever you have only floated items in a container (fluid styling)
+
+------------------>
+Assignment
+---------------
+facebook
+twitter
+punch
+vanguard
+------------------>
+
+why use brackets - it's cause of the addons that can be pulled into it
+
+
+
+----------
+DEC 12
+-----------
+
+HTML5
+
+rch
+bootstapfour
+
+
+----------------
+JAN 07
+----------------
+JavaScript
+
+Datatypes 
+The 3 basic datatypes are:
+. numbers :-integer, double, float
+. strings :- are placed within a quote
+. booleans : true and false
+
+Variable : are like buckets where you keep data
+
+------------
+JAN 09
+------------
+Strings
+String variable - holds string data
+ square brackets [] fetches any character in our string, placed within it is the index e.g [3] returns the 4th index
+The slice function carries the first arguement but does not take the last arguement
+The slice fxn is an overloaded fxn i.e it can take variable number of parameters
+
+type cohesion where we talk about the == and ===. The double equal sign == forces the data type to change to that on the left
+
+--------
+JAN 11
+-------
+Conditional Logic
+The Ternaty operator - ?
+falsy and truthy
+
+
+--------
+JAN 14
+--------
+When doing big projects you have to separate parts of the project into modules 
+Why we have functions or methods is for us to be able to create a reference.
+arguments are also called parameters
+
+
+-------
+JAN 16
+-------
+	Why use functions?
+1. To get problems solved 
+2. To modularize the code
+
+
+The argument array allows us to use parameters that were never declared
+
+
+----------
+JAN 21
+----------
+What is needed in js is defining a constructor and using the constructor to creat your object.
+
+the "this" keyword allows us to reference the present object
+
+[object][Object] means a new object of the Object data type
+
+_proto_ means prototype
+
+The Object() function is a constructor fxn (parent fxn) that we don't need to define
+
+---------
+JAN 23
+---------
+
+prototype are used to allow properties that are common to be shared
+to them. In order to reduce the amount of resources to be used by just one function
+
+Decoupling - separating functionalities
+
+--------
+JAN 25
+--------
+
+jquery is used to query the DOM
+Also used in applying styles
+issues of browser quirks(e.g compatibility with a particular browser) are fixed using jquery
+
+
+frontend--
+PROJECT
+must include Home/index About Products  job/vacation(career)
+
+
+---------
+JAN 28
+---------
+Embedded jquery - jquery saved within the system
+
+it's a must the jquery comes first before other custom scripts
+
+The dollar sign ($) invites the jquery where ever it is
+
+---------
+JAN 31
+---------
+---------------------------------
+javascript instructor - Mr Ernest
+---------------------------------
+
+npmjs.com
+call back function
+asynchronous function
+static file
+middle-ware function
+
+Model view Controller (MVC)
+View engine
+
+nodejs
+expressjs
+handlebarjs
+mongoDB (lear about RDBMS- Relational Database Management System)
+
+MEAN stack is popularly used
+MEHN stack is what we would be learning
+domain name system server- it containis the domain names and the ip addrress
+the ip adddress will be sent back to the web browser from the sever side
+nide vreares what  the app interfaces with wiht node js the js in compilable 
+
+$ npm install node@latest -g
+
+$npm install npm@latest -g
+
+
+control c to stop the server
+
+the carat means the current version of git I'm using  i.e 4 cannot work with any version like 5
+
+-------
+FEB 1
+-------
+
+ROUTES
+
+
+The req.params gets the url of the requseted site/path using req.params.any gets a specific url i.e the any section is gotten
+
+absolute url : full url
+
+routing, middleware, views, and helper-methods are core part of express
+
+year 6 method of writing functions in JS
+
+
+call back function
+
+
+middle ware (MW) stack allows us add more features
+
+making use of already created MW allows rapid development
+
+
+error handling middleware
+the fs allows us check if sth exists
+
+-------
+FEB 5 
+------
+-------------------------
+Recap of JavaScript class
+--------------------------
+We created a working folder where we keep all our work for a particular site
+
+We are trying to create a logic at the server side the server side processing
+whenever a user wants sth from the server how this request is handled and responded to.
+
+The package.json file keeps a register of all the dependencies the app needs to work fine. If one of the dependencies isn't available the app would not work well. 
+
+Remember the package.json file is an object and contains names it contains information
+
+express generator can be used to develop quickly (just like using bootstrap)
+
+npm init - helps to initialise the app it gets the package.json set up (generates the package.json file)
+
+
+{
+first thing done was to set up the package.json file... 
+next was to create a server.js file which is the beginning of the app it is responsible for the logic of the site providing a response to the user request...
+next is to install the express package using npm istall express -- (dev)save --dev is for installing development dependencies that allow smooth and quick development. (in the recap pure node/vanilla node was not used but the express package which is like a framework was used to create the server)....
+NOTE: Express is  a framework for node it simplifies the process of creating a node application rather than using pure node....
+
+whenever you want to make use of node you have to require it
+This is done by using a variable name to represent the name of the package
+e.g 
+	let express = require('express')
+a global package does not require a path
+
+	app is an object 
+app.set('port', process) the set part is like a configuration
+-- services on a web server is accessed using an ip address and the port
+
+DNS -- Domain name system
+
+request handler function contains the req and res parameters
+
+The enviroment variable can be set on the system so the app listens to the port of the system
+
+e.g
+
+$ PORT=5700 nodemon server
+
+remember that routing, middleware, views, and helpermethods are core part of express
+
+
+route is like the access point to the application it is a core feature
+
+common methods of accessing routes:
+GET= retrieve
+POST = insert
+PUT = update
+DELETE = remove
+
+
+Modularity and Simplicity is now introduced
+
+Module system -->
+
+now using modules the server folder is created with files configure.js and routes.js
+these scripts are exported to the server
+
+let router = require('express').Router() in the routes.js file can also be written like this
+
+We are using the router.get not app.get because it makes use of the express router which is more efficient
+
+
+In the config.js file all routes are added to the routes(app) function  
+
+-->exit to allow the server close itself
+
+-------
+FEB 7
+-------
+
+Morgan dependency allows rapid development, it provides logs on our server
+
+Three middlewares have been used:
+1. express
+2. morgan
+3. serve-favicon
+
+
+view rendering engine(Template Engine) - express handle bars
+
+we set our view rendering engine to be handlebars in configure.js
+
+The views folder contains the pages the users are going to see.
+An advantage of handlebars is it makes web pages dynamic 
+
+Rendering is a process of displaying a page- we used the handlebar middleware 
+
+Handler-bar helpers
+1. If helper
+2. each helper
+
+Handlerbar syntax {{}} also takes triple curly braces{{{}}} it allows html markup to be escaped i.e html mark up in the configure section is allowed to be seen on the view section
+
+we are using the Model View controller(MVC)
+The model is a fraction of what is needed/requested for from our database.
+By injecting our model into our view we have responded to a request
+
+
+{for in} and {for}
+
+check out more handle bar syntax
+
+
+---------
+FEB 19
+----------
+
+M odel
+V iew
+C onrtol
+
+-->>>mdn how to use arrrow functions
+
+
+-------
+feb 21
+-------
+Installed a new npm package multer - it allows us update files
+
+how forms are submitted:-
+1.through url encoding
+2.through multipart/formdata
+3.through raw
+
+
+methods used so far 
+join();
+extname();
+resolve();
+
+the resolve is commonly used instead of the join because it can be used in other OS's such as mac, linux ....
+
+-------
+FEB 26
+--------
+
+exe means executable file in windows
+
+Waiting for connections on port 27017 means the db is on 
+
+The interface needed to interact with the mongodb server is the mongodb shell or client used to communucate with the server
+
+Database stores related data in a structured way 
+
+The database application is an application that works with database
+mongodb is nosql
+Tables are called collections in mongodb
+Rows in mongodb are called documents (rows/tuples)
+Columns are called fields
+
+CRUD - needed to work with database
+Create
+Retrieve
+Update
+Delete
+
+commands needed
+db - shows the working/current db
+use dbName - creates a db
+show dbs - shows all databases
+
+When there are no content in a db, it is not shown in the list of databases 
+
+db.dropDatabase() - deletes a db
+
+db.createCollection('collection_name') - creates a collecction i.e a table
+
+db.collection_name.insert({'key': 'value'})
+
+documents are inserted in curly brackets
+To have multiple documents inserted separate them by commas
+
+show collections - to view all collections
+
+db.collection-name.drop() - deletes a collection
+
+db.collection_name.insert([{'key1':'value1'}, {'key2':'value2'}]) - to insert multiple documents
+
+
+db.collection_name.find() - to retrieve all documents (for unstructured output)
+
+db.collection_name.find().pretty() - to retrieve all documents (for structured output)
+
+
+Writing queries
+{'key':'value'} - Equality
+{'key':{$lt:'value'}} - Less than
+{'key':{$lte'value'}} - less than or equal value
+{'key':{$gt:'value'}} - Greater than
+{'key':{$gte'value'}} - Greater than or equal value
+{'key':{$ne:'value'}} - Not equal 
+
+using the AND/ OR operator
+
+({'key1':'value1', 'key2':'value2'}) - AND
+({$or:[{'key1':'value1', 'key2':'value2'}]}) - OR
+({'key1':'value1', $or:[{'key1':value1,'key2':'value2'}]}) - AND and OR
+
+
+
+UPDATE
+
+using the update method - update()
+
+({'key':'value'}, {$set:{'newkey':'newValue'}}) - updating documents
+(selection_criteria, update_data)
+
+
+DELETE
+using the remove method - remove()
+
+-------
+FEB 28
+-------
+
+PROJECTION
+Matches a particular field in the collection(table)
+
+LIMIT
+provides a set number of fields within the collection 
+
+SORT
+Arranges documents in ascending or descending order
+
+--->>Installed Mongoose package
+     It would help work with mongoDB we would connect our app on server.js to mongodb
+
+-------
+MARCH 5
+-------
+
+------
+RECAP 
+------
+
+virtual properties are those that are not saved in the db but are obtained from the db
+
+the controller works btw the view and model
+
+regular expression ($regex) - it checks for a pattern 
+e.g abc@gmail.com
+Where: (@)  and (.) is constant
+
+....raise condition - where two or more instances are trying to use the same instance
+
+check data-id on w3school
+check hidden fields
+
+momentjs.com to see how time can be configured
+
+just as the handlebars, helpers are placed in the engine of configure
+
+--You can download wappalyzer to help you know the technologies used to build a website.
+
+
+March 7
+----------
+
+the preventDefault() function prevents the button from behaving in its default manner where when clicked the page is reloaded
+
+use AJAX for the delete button
+
+Modal in bootsrap
+
+---------
+12 MARCH 
+---------
+Nodejs also has an index where all required can be placed
+
+
+TO DO-> Removing comments when the image is deleted
+
+search for all comments and use the remove() image would be removed after the comments are removed. So in the controller remove the image callback fxn is placed in the comment fxn.
+
+--------
+14 MARCH
+--------
+
+new module installed ->> async
+
+go to these sites:
+ 
+animate.css --> produces beautiful animations
+
+wow.js for sweet animations --> wow suspends the amimation
+
+---------
+28 MARCH
+---------
+used the console.log to check, fix the error from the flickagram login
+
+error was due to arrow function
+
+used reg expression to match characters where asterisks means one or more
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

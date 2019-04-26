@@ -1,0 +1,112 @@
+
+.navbar-default {
+  background-color: #3b5998;
+  border: none;
+  border-radius: 0px;
+}
+
+.navbar-default .navbar-brand {
+  color: #fff;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: orange;
+  background-color: transparent;
+}
+
+
+.navbar-default .navbar-nav > li > a {
+  color: #fff;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: orange;
+  background-color: transparent;
+}
+
+.upload_area, .newest_images_area, .stats_area, .popular_images_area, .latest_comments_area, .comment_area, .popular_area, .signup_area, .chat_area{
+	border: 1px solid #3b5998 ;
+	border-radius: 5px;
+	min-height: 250px;
+	margin-bottom: 10px;
+	padding: 5px 10px;.popular_area, .signup_area
+}
+
+.stats_area, .popular_images_area, .latest_comments_area{
+	min-height: 150px;
+}
+
+.comment_area{
+	min-height: 100px;
+}
+
+.chat_area{
+	min-height: 80vh;
+}
+
+.chat_room {
+	height: 350px;
+	background-color: whitesmoke;
+	overflow: scroll;
+}
+
+
+.popular_area, .signup_area{
+	min-height: 57vh;
+	margin-bottom: 10vh;
+}
+.left-side{
+	min-height: 80vh
+}
+
+
+.userMessage, .myMessage, .serverMessage {
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid transparent;
+	max-width: 80%;
+	float: left;
+	display: block;
+	clear: both;
+}
+
+.userMessage {
+	background-color: LightPink;
+	border-radius: 25px 50px;
+	border-top-left-radius: 0px;
+}
+
+.myMessage {
+	background-color: LightBlue;
+	float: right;
+	border-radius: 50px 25px;
+	border-top-right-radius: 0px;
+
+}
+
+.serverMessage {
+	background-color: LightGreen;
+	border-radius: 25px 50px;
+	border-top-left-radius: 0px;
+	color: white;
+}
+
+
+h4{
+	border-bottom: 1px solid orange;
+	padding-bottom: 5px;
+}
+
+footer{
+	background: orange;
+	padding:10px ;
+	margin-top:5px;
+	color: white;
+
+}
+
+.carousel-inner{
+	height: 49vh;
+}

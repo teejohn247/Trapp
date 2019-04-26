@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Flickagram</title>
+
+
+    <!-- Bootstrap -->
+    <link href="/public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/public/css/style.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+        <nav class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Flickagram</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+             <form method="post" action="/login" class="navbar-form navbar-right form-inline" role="form">
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" placeholder="email" required="">
+                </div>
+                 <div class="form-group">
+                  <input type="password" class="form-control" name="password" placeholder="password" required="">
+                </div>
+                <button type="submit" class="btn btn-success">Login</button>
+            </form>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 left-side">
+      <section class="col-md-12 popular_area">
+        <h4> Popular Images</h4>
+          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+              {{#each indicators}}
+              <li data-target="#carousel-example-generic" data-slide-to="{{this}}"></li>
+              {{/each}}
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+              <div class="item active">
+                <img src="/public/img/flickagram.png" alt="flickagram picture" style="width: 100%; height: 49vh">
+                <div class="carousel-caption">
+                  Welcome to Flickagram
+                </div>
+              </div>
+              {{#each images}}
+                <div class="item">
+                  <img src="/public/upload/{{filename}}" alt="{{description}}" style="width: 100%; height: 49vh">
+                  <div class="carousel-caption">
+                    {{title}}
+                  </div>
+                </div>
+              {{/each}}
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+          </div> 
+    </section>
+    </div>
+
+    <aside class="col-md-6">
+      <section class="col-md-12 signup_area">
+        <h4> Sign Up</h4>
+        {{#if signupSuccess}}
+        <p class="alert alert-success">{{signupSuccess}} <span class="close" data-dismiss="alert">&times;</span></p>
+        {{/if}}
+        {{#if userExist}}
+        <p class="alert alert-warning">{{userExist}} <span class="close" data-dismiss="alert">&times;</span></p>
+        {{/if}}
+        {{#if signUpErrors}}
+        `<div class="container-fluid">
+          <div class="alert alert-danger row">
+              <ul class="col-md-11">
+                {{#each signUpErrors}}
+                <li>{{msg}}</li>
+                 {{/each}}
+              </ul>
+              <span class="close col-md-1" data-dismiss="alert">&times;</span>
+          </div>
+        </div>
+        {{/if}}
+         <form method="post" action="/signup" class="form-horizontal" role="form">
+             <div class="form-group">
+              <label for="name" class="col-sm-2 control-label">Full Name</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="name" placeholder="Enter Full Name" name="name">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="emial" class="col-sm-2 control-label">Email</label>
+              <div class="col-sm-10">
+                <input class="form-control" type="email" id="email" placeholder="Enter email" name="email"></input>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="password" class="col-sm-2 control-label">Password</label>
+              <div class="col-sm-10">
+                <input type="password" class="form-control" id="password" placeholder="Enter a password" name="password">
+              </div>
+            </div>
+             <div class="form-group">
+              <label for="confirmpassword" class="col-sm-2 control-label">Confirm Password</label>
+              <div class="col-sm-10">
+                <input type="password" class="form-control" id="password" placeholder="Confirm password" name="confirmpassword">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class=" col-sm-12">
+                <button type="submit" class="btn btn-success">Sign Up</button>
+              </div>
+            </div>
+          </form>
+      </section>
+    </aside>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="col-md-12 text-center">
+      <p> &copy; Flickagram 2019. All Rights Reserved.</p>
+    </div>
+  </div>
+
+</footer>
+
+
+<!-- <div class="container">
+  <div class="col-md-6">
+    <p>Welcome {{{name}}}</p>
+    {{#if admin}}
+      <button class="btn btn-success"> Log In </button>
+      {{else}}
+      <button class="btn btn-primary"> Sign Up </button>
+    {{/if}}
+    <ul>
+      {{#each letters}}
+        <li>{{@index}}.{{this}}</li>
+        {{/each}}
+    </ul>
+  </div>
+</div>
+ -->
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/public/js/jquery.js"></script>
+    <script src="/public/js/bootstrap.min.js"></script>
+  </body>
+</html>
