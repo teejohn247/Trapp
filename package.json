@@ -4,7 +4,7 @@
   "description": "An image Sharing Web Application",
   "main": "nodemon server",
   "scripts": {
-    "start": "node server.js",
+    "start": "nodemon server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
